@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1536" height="1024" viewBox="0 0 1536 1024">
+  <defs>
+    <style>
+      text {
+        font-family: "Apple SD Gothic Neo", "Noto Sans CJK KR", "Arial Unicode MS", sans-serif;
+        fill: #1f2937;
+      }
+      .title { font-size: 34px; font-weight: 700; }
+      .section { font-size: 27px; font-weight: 700; }
+      .body { font-size: 22px; }
+      .small { font-size: 18px; }
+      .code { font-family: Menlo, Consolas, monospace; font-size: 19px; }
+      .main { fill: #eff6ff; stroke: #2563eb; stroke-width: 2; }
+      .worker { fill: #ecfdf5; stroke: #16a34a; stroke-width: 2; }
+      .latch { fill: #fff7ed; stroke: #f97316; stroke-width: 2; }
+      .result { fill: #f5f3ff; stroke: #7c3aed; stroke-width: 2; }
+      .line { stroke: #64748b; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+      .dashed { stroke: #16a34a; stroke-width: 3; stroke-dasharray: 9 8; fill: none; marker-end: url(#arrow-green); }
+    </style>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#64748b" />
+    </marker>
+    <marker id="arrow-green" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#16a34a" />
+    </marker>
+  </defs>
+
+  <rect width="1536" height="1024" fill="#ffffff"/>
+
+  <text x="768" y="62" text-anchor="middle" class="title">CountDownLatch로 워커 스레드를 같은 출발선에 세우기</text>
+
+  <text x="110" y="122" class="section" fill="#2563eb">메인 스레드</text>
+  <text x="930" y="122" class="section" fill="#16a34a">워커 스레드들</text>
+
+  <rect x="70" y="160" width="520" height="138" rx="14" class="main"/>
+  <text x="100" y="205" class="body">1. 반복문으로 작업을 executor에 제출</text>
+  <text x="100" y="244" class="code">for (...) executor.submit(worker);</text>
+  <text x="100" y="276" class="small">메인 스레드는 작업을 제출할 뿐, 워커 완료를 기다리지 않는다.</text>
+
+  <rect x="70" y="378" width="520" height="118" rx="14" class="latch"/>
+  <text x="100" y="423" class="body">2. 모든 워커가 준비될 때까지 대기</text>
+  <text x="100" y="462" class="code">standbyLatch.await();</text>
+
+  <rect x="70" y="576" width="520" height="118" rx="14" class="main"/>
+  <text x="100" y="621" class="body">3. 출발 신호를 보냄</text>
+  <text x="100" y="660" class="code">startLatch.countDown();</text>
+
+  <rect x="70" y="774" width="520" height="118" rx="14" class="result"/>
+  <text x="100" y="819" class="body">4. Future 결과를 모아 성공/실패 검증</text>
+  <text x="100" y="858" class="code">future.get(); assertThat(...);</text>
+
+  <path d="M330 298 V378" class="line"/>
+  <path d="M330 496 V576" class="line"/>
+  <path d="M330 694 V774" class="line"/>
+
+  <rect x="750" y="160" width="250" height="92" rx="14" class="worker"/>
+  <text x="875" y="199" text-anchor="middle" class="body">워커 1</text>
+  <text x="875" y="231" text-anchor="middle" class="small">executor가 실행 시작</text>
+
+  <rect x="1040" y="160" width="250" height="92" rx="14" class="worker"/>
+  <text x="1165" y="199" text-anchor="middle" class="body">워커 2</text>
+  <text x="1165" y="231" text-anchor="middle" class="small">executor가 실행 시작</text>
+
+  <text x="1340" y="214" text-anchor="middle" class="body">...</text>
+
+  <rect x="710" y="322" width="620" height="96" rx="14" class="latch"/>
+  <text x="1020" y="361" text-anchor="middle" class="body">각 워커가 준비 완료를 알림</text>
+  <text x="1020" y="395" text-anchor="middle" class="code">standbyLatch.countDown();</text>
+
+  <rect x="710" y="494" width="620" height="104" rx="14" class="worker"/>
+  <text x="1020" y="536" text-anchor="middle" class="body">출발 신호가 올 때까지 대기</text>
+  <text x="1020" y="573" text-anchor="middle" class="code">startLatch.await();</text>
+
+  <rect x="710" y="690" width="620" height="104" rx="14" class="worker"/>
+  <text x="1020" y="732" text-anchor="middle" class="body">메인 스레드의 countDown 이후 실제 작업 시작</text>
+  <text x="1020" y="769" text-anchor="middle" class="code">couponService.issueCoupon();</text>
+
+  <path d="M875 252 V322" class="dashed"/>
+  <path d="M1165 252 V322" class="dashed"/>
+  <path d="M1020 418 V494" class="dashed"/>
+  <path d="M1020 598 V690" class="dashed"/>
+
+  <path d="M590 220 H710" class="line"/>
+  <text x="650" y="199" text-anchor="middle" class="small">작업 제출</text>
+
+  <path d="M590 437 H710" class="line"/>
+  <text x="650" y="416" text-anchor="middle" class="small">N → 0 대기</text>
+
+  <path d="M590 635 H710" class="line"/>
+  <text x="650" y="614" text-anchor="middle" class="small">1 → 0 출발</text>
+
+  <rect x="720" y="852" width="690" height="108" rx="16" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="1065" y="894" text-anchor="middle" class="body">핵심</text>
+  <text x="1065" y="929" text-anchor="middle" class="small">standbyLatch는 모든 워커가 출발선에 왔는지 확인한다.</text>
+  <text x="1065" y="955" text-anchor="middle" class="small">startLatch는 준비된 워커들을 한 번에 출발시키는 신호다.</text>
+</svg>
