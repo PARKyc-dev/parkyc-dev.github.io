@@ -63,6 +63,8 @@ Container-3 → BlockingQueue-3
 Container-4 → BlockingQueue-4
 ```
 
+![Blocking Queue](/assets/image/2026-07-06-newbie/newbie-2.png)
+
 즉, `BlockingQueue`만으로는 전체 요청 순서나 선착순 처리를 보장할 수 없었습니다.  
 각 컨테이너 내부에서는 Queue 순서가 유지될 수 있지만, 전체 시스템 관점에서는 요청이 여러 Queue로 분산되기 때문입니다.
 
@@ -88,6 +90,8 @@ FOR UPDATE;
 
 또한 모든 수강신청 요청을 하나의 Lock으로 묶으면 서로 다른 강좌에 대한 신청까지 모두 대기하게 됩니다.  
 즉, 정합성은 어느 정도 확보할 수 있었지만, 병목이 너무 큰 방식이었습니다.
+
+![프로젝트 서버 구성](/assets/image/2026-07-06-newbie/newbie-3.png)
 
 ---
 ## 문제해결 시도 4 - BlockingQueue + SELECT FOR UPDATE Row Lock
@@ -116,6 +120,8 @@ FOR UPDATE;
 
 대신 `BlockingQueue`는 각 컨테이너 내부에서 DB 접근 요청이 순간적으로 몰리는 것을 완화하기 위한 보조 장치로 사용했습니다.  
 실제 동일 강좌에 대한 정합성은 `SELECT FOR UPDATE`를 이용한 DB Row Lock이 담당했습니다.
+
+![프로젝트 서버 구성](/assets/image/2026-07-06-newbie/newbie-4.png)
 
 ---
 ## 문제해결 시도 5 - 수강신청 로직 보완
