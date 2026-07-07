@@ -14,12 +14,12 @@ timezone: Asia/Seoul
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: PARKyc Dev Note # the main title
+title: PARKyc Note # the main title
 
-tagline: Java, Spring, Backend 개발 기록 # it will display as the subtitle
+tagline: 기록하기 위해서 정리, 정리하면서 학습 # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
-  Java와 Spring 기반 백엔드 개발을 학습하고 구현하며 정리하는 기술블로그입니다.
+  작업한 내용을 기록, 공유하면서 한번 더 정리하고 학습하기 위한 블로그 입니다..
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
