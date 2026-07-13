@@ -1,11 +1,11 @@
 ---
 title: "동시성 문제 해결 - 쿠폰"
 date: 2026-07-02 23:00:00 +0900
-categories: [Java, Concurrency]
+categories: [Backend, Concurrency]
 tags: [java, concurrency, coupon, 작성중]
 ---
 
-Github : https://github.com/PARKyc-web/concurrency-lab  
+Github : https://github.com/PARKyc-dev/concurrency-lab  
 File : `CouponServiceTest.java`
 
 ---
@@ -167,4 +167,4 @@ DB 조건부 update 방식은 저장소를 하나로 유지할 수 있고, `WHER
 
 ---
 
-Github Code : https://github.com/PARKyc-web/concurrency-lab
+Github Code : https://github.com/PARKyc-dev/concurrency-lab

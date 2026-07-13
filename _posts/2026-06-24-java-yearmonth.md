@@ -1,7 +1,7 @@
 ---
 title: "Java YearMonth 정리"
 date: 2026-06-24 23:00:00 +0900
-categories: [Java]
+categories: [Backend, Java]
 tags: [java, yearmonth, time-api]
 ---
 

@@ -1,11 +1,11 @@
 ---
 title: "Java 동시성 테스트 방법 - Thread"
 date: 2026-06-30 23:00:00 +0900
-categories: [Java]
+categories: [Backend, Java]
 tags: [java, concurrency, thread, test]
 ---
 
-Github: https://github.com/PARKyc-web/concurrency-lab    
+Github: https://github.com/PARKyc-dev/concurrency-lab    
 File: `CouponServiceTest.java`
 
 동시성 문제가 발생할 수 있는 기능을 만들었을 때는 단순한 단위 테스트만으로는 충분하지 않다.  
