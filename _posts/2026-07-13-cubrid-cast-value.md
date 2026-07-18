@@ -1,5 +1,5 @@
 ---
-title: "Cubrid 데이터베이스 - CAST AS VARCHAR"
+title: "Cubrid 데이터베이스 - CAST(value AS TYPE)"
 date: 2026-07-13 22:20:00 +0900
 categories: [Persistence, Cubrid]
 tags: [persistence, Database, Cubrid]
