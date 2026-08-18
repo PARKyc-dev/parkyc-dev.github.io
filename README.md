@@ -1,39 +1,30 @@
-# Chirpy Starter
+<div align="center">
 
-[![Gem Version](https://img.shields.io/gem/v/jekyll-theme-chirpy)][gem]&nbsp;
-[![GitHub license](https://img.shields.io/github/license/cotes2020/chirpy-starter.svg?color=blue)][mit]
+# PARKyc Note
 
-A minimal, ready-to-use template for creating a blog with the [**Chirpy**][chirpy] Jekyll theme. Get up and running in minutes with all critical files pre-configured.
+**공부한 내용을 기록하고, 경험을 회고하며 더 깊이 이해하기 위한 기술 블로그**
 
-## Why This Starter Exists
+![Jekyll](https://img.shields.io/badge/Jekyll-4.4.1-CC0000?logo=jekyll&logoColor=white)
+![Chirpy](https://img.shields.io/badge/Theme-Chirpy-2E3440)
+![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Deployed-222222?logo=githubpages&logoColor=white)
 
-When installing Chirpy through [RubyGems.org][gem], Jekyll can only read a subset of theme files (`_data`, `_layouts`, `_includes`, `_sass`, `assets`) and limited `_config.yml` options from the gem. As a result, users cannot enjoy the full out-of-the-box experience that Chirpy offers.
+</div>
 
-To unlock all features, the following files must be present in your Jekyll site:
+---
 
-```shell
-.
-├── _config.yml
-├── _plugins
-├── _tabs
-└── index.html
+> PARKyc Note는 개발하며 공부한 기술 개념과 문제를 해결한 경험, 그리고 그 과정에서 얻은 생각을 정리하는 개인 기술 블로그입니다.
+>
+> 단순히 지식을 모으는 데 그치지 않고, 왜 그런 선택을 했는지와 무엇을 배웠는지를 함께 기록합니다.
+
+## 블로그 구조
+
+```text
+PARKyc-web/
+├── _posts/      # 기술 학습과 회고 글
+├── _tabs/       # 소개, 아카이브, 카테고리, 태그 페이지
+├── assets/       # 이미지와 정적 자산
+├── _config.yml  # Jekyll 및 블로그 설정
+└── index.html    # 블로그 메인 페이지
 ```
 
-This starter bundles those files from the latest **Chirpy** release along with a [CD][CD] workflow, so you can start writing immediately.
-
-## Usage
-
-Check out the [theme's docs](https://github.com/cotes2020/jekyll-theme-chirpy/wiki).
-
-## Contributing
-
-This repository is automatically updated with new releases from the theme repository. If you encounter any issues or want to contribute to its improvement, please visit the [theme repository][chirpy] to provide feedback.
-
-## License
-
-This work is published under [MIT][mit] License.
-
-[gem]: https://rubygems.org/gems/jekyll-theme-chirpy
-[chirpy]: https://github.com/cotes2020/jekyll-theme-chirpy/
-[CD]: https://en.wikipedia.org/wiki/Continuous_deployment
-[mit]: https://github.com/cotes2020/chirpy-starter/blob/master/LICENSE
+이 블로그는 [Jekyll](https://jekyllrb.com/)과 [Chirpy](https://github.com/cotes2020/jekyll-theme-chirpy) 테마를 사용해 운영합니다.
