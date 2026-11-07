@@ -1,0 +1,7 @@
+  {% unless page.layout == "post" %}
+  <div class="workspace-titlebar"><span aria-hidden="true" class="workspace-dots"><i></i><i></i><i></i></span><span>parkyc.dev — workspace</span></div>
+  {% endunless %}
+  <header class="workspace-nav"><a class="workspace-brand" href="{{ '/' | relative_url }}"><span aria-hidden="true">&gt;_</span> PARKyc.dev</a>
+    <nav aria-label="주 메뉴"><a href="{{ '/archives/' | relative_url }}">Posts</a><a href="https://github.com/{{ site.github.username }}">GitHub ↗</a><a href="{{ '/about/' | relative_url }}">About</a><a href="{{ '/tags/' | relative_url }}">Tags</a><a href="{{ '/categories/' | relative_url }}">Categories</a><button type="button" class="search-open" aria-controls="workspace-search" aria-expanded="false">⌕ Search</button></nav>
+  </header>
+  <section id="workspace-search" class="search-panel" hidden><label for="workspace-query">게시글 검색</label><input id="workspace-query" type="search" placeholder="제목이나 내용 검색" autocomplete="off"><ul id="workspace-results"></ul></section>

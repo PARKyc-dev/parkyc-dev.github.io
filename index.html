@@ -1,4 +1,40 @@
 ---
-layout: home
-# Index page
+layout: workspace
 ---
+<section class="hero">
+  <div class="hero-copy">
+  <p class="command"><span>➜</span> ~/workspace <b>cat README.md</b></p>
+  <h1>Build. Break. Learn.<span class="cursor" aria-hidden="true"></span></h1>
+  <p class="intro">문제를 해결하고, 그 과정을 기록합니다.</p>
+  <div class="stack"><span>☕ Java</span><span>◉ Spring Boot</span><span>☁ AWS</span><span>▤ Backend</span><span>◇ Architecture</span></div>
+  </div>
+  <aside class="identity-terminal" aria-label="개발자 소개">
+    <div class="identity-title"><span class="identity-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>whoami</span><span class="identity-status">● WORKSPACE</span></div>
+    <div class="identity-body">
+      <p class="identity-command"><span>➜</span> whoami</p>
+      <p class="identity-output"><strong>PARKyc</strong><br>Backend Developer</p>
+      <p class="identity-command"><span>➜</span> cat interests.txt</p>
+      <p class="identity-output">Java · Spring Boot · AWS<br>Backend Architecture</p>
+      <p class="identity-command"><span>➜</span> ls ~/logs</p>
+      <p class="identity-output">{{ site.posts.size }}개의 개발 기록</p>
+      <p class="identity-prompt" aria-hidden="true">➜ <span></span></p>
+    </div>
+  </aside>
+</section>
+<section class="logs" aria-labelledby="logs-title">
+  <div class="section-heading"><h2 id="logs-title" class="command"><span>➜</span> tail -f ~/logs/<b>dev.log</b></h2><span class="online">● WORKSPACE</span></div>
+  <div class="log-list">
+  {% for post in site.posts limit: 5 %}
+    {% assign kind = post.log_type | default: 'NOTE' | upcase %}
+    <a class="log-row" href="{{ post.url | relative_url }}"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y-%m-%d' }}</time><span class="badge {{ kind | downcase }}">{{ kind }}</span><span class="log-copy"><strong>{{ post.title }}</strong><small>{{ post.description | default: post.excerpt | strip_html | normalize_whitespace | truncate: 110 }}</small></span><span class="arrow" aria-hidden="true">›</span></a>
+  {% endfor %}
+  </div><a class="more command" href="{{ '/archives/' | relative_url }}">➜ more <b>/posts ...</b></a>
+</section>
+<section class="types" aria-label="로그 유형">
+  {% assign kinds = 'LEARN,BUILD,DEBUG,ERROR,NOTE' | split: ',' %}
+  {% assign descriptions = '기술 학습과 개념 정리,직접 구현하고 만든 것,문제 원인 분석과 개선,실제 발생한 오류와 해결,개발 기록과 생각' | split: ',' %}
+  {% for kind in kinds %}<button type="button" class="type {{ kind | downcase }}" data-filter="{{ kind }}"><span aria-hidden="true">{% case kind %}{% when 'LEARN' %}⌘{% when 'BUILD' %}◇{% when 'DEBUG' %}☼{% when 'ERROR' %}△{% else %}▤{% endcase %}</span><strong>{{ kind }}</strong><small>{{ descriptions[forloop.index0] }}</small></button>{% endfor %}
+</section>
+<script>
+document.querySelectorAll('[data-filter]').forEach(function(button){button.addEventListener('click',function(){var active=button.getAttribute('aria-pressed')==='true';document.querySelectorAll('[data-filter]').forEach(function(b){b.setAttribute('aria-pressed','false')});button.setAttribute('aria-pressed',String(!active));document.querySelectorAll('.log-row').forEach(function(row){row.hidden=!active&&!row.querySelector('.badge').classList.contains(button.dataset.filter.toLowerCase())})})});
+</script>
