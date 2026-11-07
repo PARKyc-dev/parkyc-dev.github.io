@@ -16,7 +16,7 @@ script_includes:
 <article class="px-1" data-toc="{{ enable_toc }}">
   <header>
     <p class="workspace-path">➜ ~/workspace/posts/{{ page.slug }}.md</p>
-    {% assign kind = page.log_type | default: 'NOTE' | upcase %}
+    {% assign kind = page.log_type | default: 'INFO' | upcase %}
     <span class="workspace-post-type {{ kind | downcase }}">{{ kind }}</span>
     <h1 data-toc-skip>{{ page.title }}</h1>
     {% if page.description %}
@@ -99,6 +99,8 @@ script_includes:
       </div>
     </div>
   </header>
+
+  {% include post-series.html %}
 
   {% if enable_toc %}
     <div id="toc-bar" class="d-flex align-items-center justify-content-between invisible">

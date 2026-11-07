@@ -1,5 +1,6 @@
 ---
 title: "Java 시간 타입 정리 — 종류, 저장 방법, 실무 사용법"
+log_type: LEARN
 date: 2026-07-20 22:00:00 +0900
 categories: [Backend, Java]
 tags: [java, time-api]

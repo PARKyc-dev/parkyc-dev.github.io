@@ -2,10 +2,17 @@
 <html lang="ko">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  {% if page.url == '/' %}
+  {% seo title=false %}
+  <title>{{ site.title | escape }}</title>
+  {% else %}
   {% seo %}
+  {% endif %}
+  {% include favicons.html %}
   <link rel="stylesheet" href="{{ '/assets/css/workspace.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/workspace-header.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/workspace-profile.css' | relative_url }}">
+{% include workspace-theme.html %}
 </head>
 <body>
 <div class="window">
@@ -14,6 +21,6 @@
     {% include workspace-profile.html %}
     <main>{{ content }}</main>
   </div>
-  <footer><a class="brand" href="{{ '/' | relative_url }}">&gt;_ PARKyc.dev</a><span>© {{ site.time | date: '%Y' }} PARKyc · Jekyll / GitHub Pages</span><a href="https://github.com/{{ site.github.username }}">GitHub ↗</a></footer>
+  {% include workspace-footer.html %}
 </div>
 {% include workspace-search-script.html %}</body></html>

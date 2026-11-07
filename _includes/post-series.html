@@ -1,0 +1,12 @@
+{% if page.series and page.series != empty %}
+  {% assign series_posts = site.posts | where: 'series', page.series | sort: 'date' %}
+  <section class="post-series" aria-labelledby="post-series-title">
+    <div class="series-heading"><div><span class="series-label">SERIES</span><h2 id="post-series-title" data-toc-skip>{{ page.series | escape }}</h2></div><span class="series-count">{{ series_posts.size }}개의 글</span></div>
+    <ol class="series-list">
+      {% for series_post in series_posts %}
+        <li><a href="{{ series_post.url | relative_url }}"{% if series_post.url == page.url %} aria-current="page"{% endif %}>{{ series_post.title | escape }}</a>{% if series_post.url == page.url %}<span class="series-current">현재 글</span>{% endif %}</li>
+      {% endfor %}
+    </ol>
+    <a class="series-all" href="{{ '/series/' | relative_url }}">모든 시리즈 보기 →</a>
+  </section>
+{% endif %}

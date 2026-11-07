@@ -1,6 +1,55 @@
 <script>
-const searchPosts = [{% for post in site.posts %}{title:{{ post.title | jsonify }},url:{{ post.url | relative_url | jsonify }},text:{{ post.content | strip_html | normalize_whitespace | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}];
-const openSearch=document.querySelector('.search-open'), searchPanel=document.querySelector('#workspace-search'), searchQuery=document.querySelector('#workspace-query'), searchResults=document.querySelector('#workspace-results');
-openSearch.addEventListener('click',()=>{searchPanel.hidden=!searchPanel.hidden;openSearch.setAttribute('aria-expanded',String(!searchPanel.hidden));if(!searchPanel.hidden)searchQuery.focus()});
-searchQuery.addEventListener('input',()=>{const q=searchQuery.value.trim().toLocaleLowerCase();searchResults.replaceChildren();if(!q)return;const matches=searchPosts.filter(p=>(p.title+' '+p.text).toLocaleLowerCase().includes(q));if(!matches.length){const item=document.createElement('li');item.textContent='검색 결과가 없습니다.';searchResults.append(item)}matches.forEach(p=>{const item=document.createElement('li'),link=document.createElement('a');link.href=p.url;link.textContent=p.title;item.append(link);searchResults.append(item)})});
+(() => {
+  const posts = [{% for post in site.posts %}{title:{{ post.title | jsonify }},url:{{ post.url | relative_url | jsonify }},category:{{ post.categories.last | default: 'INFO' | jsonify }},text:{{ post.content | strip_html | normalize_whitespace | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}];
+  const trigger = document.querySelector('.search-open');
+  const dialog = document.querySelector('#workspace-search');
+  const query = document.querySelector('#workspace-query');
+  const results = document.querySelector('#workspace-results');
+  const status = document.querySelector('#workspace-search-status');
+  function renderResults() {
+    const term = query.value.trim().toLocaleLowerCase();
+    const matches = term ? posts.filter(post => (post.title + ' ' + post.category + ' ' + post.text).toLocaleLowerCase().includes(term)) : posts.slice(0, 6);
+    results.replaceChildren();
+    matches.forEach(post => {
+      const item = document.createElement('li');
+      const link = document.createElement('a');
+      const title = document.createElement('span');
+      const badge = document.createElement('span');
+      link.href = post.url;
+      title.className = 'search-result-title';
+      title.textContent = post.title;
+      badge.className = 'search-result-category';
+      badge.textContent = post.category;
+      link.append(title, badge);
+      item.append(link);
+      results.append(item);
+    });
+    status.textContent = term ? (matches.length ? matches.length + '개의 검색 결과' : '검색 결과가 없습니다.') : (matches.length ? '' : '아직 등록된 게시글이 없습니다.');
+  }
+  trigger.addEventListener('click', () => {
+    renderResults();
+    dialog.showModal();
+    document.body.classList.add('search-is-open');
+    trigger.setAttribute('aria-expanded', 'true');
+    query.focus();
+  });
+  dialog.querySelector('.search-close').addEventListener('click', () => dialog.close());
+  dialog.addEventListener('click', event => {
+    if (event.target !== dialog) return;
+    const bounds = dialog.getBoundingClientRect();
+    if (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom) dialog.close();
+  });
+  dialog.addEventListener('close', () => {
+    document.body.classList.remove('search-is-open');
+    trigger.setAttribute('aria-expanded', 'false');
+    trigger.focus();
+  });
+  dialog.addEventListener('keydown', event => {
+    if (event.key === 'Escape') {
+      event.preventDefault();
+      dialog.close();
+    }
+  });
+  query.addEventListener('input', renderResults);
+})();
 </script>

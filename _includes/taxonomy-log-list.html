@@ -1,0 +1,11 @@
+<section class="logs" aria-labelledby="logs-title">
+  <div class="section-heading"><h2 id="logs-title" class="command"><span>➜</span> ls -al ~/<b>{{ include.taxonomy }}/</b></h2><span class="online">● WORKSPACE</span></div>
+  <div class="log-list">
+  {% assign groups = site[include.taxonomy] | sort %}
+  {% for group in groups %}
+    {% assign slug = group[0] | slugify | url_encode %}
+    {% assign group_url = '/' | append: include.taxonomy | append: '/' | append: slug | append: '/' %}
+    <a class="log-row taxonomy-row" href="{{ group_url | relative_url }}"><span class="badge info">{{ include.label }}</span><span class="log-copy"><strong>{{ group[0] | escape }}</strong><small>{{ group[1].size }}개의 글</small></span><span class="arrow" aria-hidden="true">›</span></a>
+  {% endfor %}
+  </div>
+</section>

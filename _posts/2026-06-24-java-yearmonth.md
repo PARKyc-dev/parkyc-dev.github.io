@@ -1,5 +1,6 @@
 ---
 title: "Java YearMonth 정리"
+log_type: LEARN
 date: 2026-06-24 23:00:00 +0900
 categories: [Backend, Java]
 tags: [java, yearmonth, time-api]

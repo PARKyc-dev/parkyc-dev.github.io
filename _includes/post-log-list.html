@@ -1,0 +1,12 @@
+<section class="logs" aria-labelledby="logs-title">
+  <div class="section-heading"><h2 id="logs-title" class="command"><span>➜</span> {{ include.command | default: 'tail -f' }} ~/logs/<b>{{ include.name | default: 'dev.log' | escape }}</b></h2><span class="online">● WORKSPACE</span></div>
+  <div class="log-list">
+  {% assign log_posts = include.posts | default: site.posts %}
+  {% assign log_limit = include.limit | default: log_posts.size %}
+  {% for post in log_posts limit: log_limit %}
+    {% assign kind = post.log_type | default: 'INFO' | upcase %}
+    <a class="log-row" href="{{ post.url | relative_url }}"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y-%m-%d' }}</time><span class="badge {{ kind | downcase }}">{{ kind }}</span><span class="log-copy"><strong>{{ post.title }}</strong><small>{{ post.description | default: post.excerpt | strip_html | normalize_whitespace | truncate: 110 }}</small></span><span class="arrow" aria-hidden="true">›</span></a>
+  {% endfor %}
+  </div>
+  {% if include.show_more %}<a class="more command" href="{{ '/archives/' | relative_url }}">➜ more <b>/posts ...</b></a>{% endif %}
+</section>

@@ -58,7 +58,6 @@ layout: compress
               {% include {{ _include_path }} lang=lang %}
             {% endfor %}
 
-            {% include_cached footer.html lang=lang %}
           </div>
         </div>
 
@@ -73,6 +72,7 @@ layout: compress
     </div>
 
     </div>
+    {% include workspace-footer.html %}
     <div id="mask" class="d-none position-fixed w-100 h-100 z-1"></div>
 
     {% if site.pwa.enabled %}
