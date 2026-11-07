@@ -1,0 +1,7 @@
+<aside class="profile-sidebar" aria-label="작성자 프로필">
+  <div class="profile-card">
+    <a class="profile-avatar" href="https://github.com/{{ site.github.username }}" aria-label="PARKyc GitHub 프로필"><img src="{{ site.avatar | relative_url }}" alt="PARKyc 프로필 이미지"></a>
+    <div class="profile-copy"><p class="profile-label">// DEVELOPER PROFILE</p><h2>PARKyc</h2><p class="profile-role">Backend Developer</p><p class="profile-bio">기록하기 위해 정리하고 정리하며 한 번 더 배웁니다</p><a class="profile-github" href="https://github.com/{{ site.github.username }}">↗ GitHub <span>@{{ site.github.username }}</span></a></div>
+    <div class="profile-stats"><div><strong>{{ site.posts.size }}</strong><span>POSTS</span></div><div><strong>{{ site.tags.size }}</strong><span>TAGS</span></div><div><strong>{% if site.posts.first %}{{ site.posts.first.date | date: '%Y.%m.%d' }}{% else %}—{% endif %}</strong><span>LATEST</span></div></div>
+  </div>
+</aside>

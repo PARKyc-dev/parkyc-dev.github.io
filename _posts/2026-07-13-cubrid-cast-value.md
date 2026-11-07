@@ -1,8 +1,9 @@
 ---
 title: "Cubrid 데이터베이스 - CAST(value AS TYPE)"
+log_type: ERROR
 date: 2026-07-13 22:20:00 +0900
 categories: [Persistence, Cubrid]
-tags: [persistence, Database, Cubrid]
+tags: [persistence, database, cubrid]
 ---
 CUBRID에서 `MERGE`, `INSERT`문을 작성하던 중, `VARCHAR` 컬럼에 문자열(`20260101`)을 넣었는데도 데이터 타입 오류가 발생했다.
 

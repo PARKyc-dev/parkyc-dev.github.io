@@ -1,8 +1,9 @@
 ---
 title: 신입시절 수강신청 시행착오 회고
+log_type: DEBUG
 date: 2026-07-06 22:56:00 +0900
 categories: [Backend, Concurrency]
-tags: [Concurrency, Legacy]
+tags: [concurrency, legacy]
 mermaid: true
 ---
 

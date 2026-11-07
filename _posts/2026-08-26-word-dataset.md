@@ -1,8 +1,9 @@
 ---
 title: "JYP-Word : 하루 20단어 학습 사이트 - 데이터셋 생성 시행착오"
+log_type: DEBUG
 date: 2026-08-26 22:00:00 +0900
 categories: [Project, JYP-Word]
-tags: [Project, JYP-Word, Dataset]
+tags: [project, jyp-word, dataset]
 toc: true
 comments: true
 ---

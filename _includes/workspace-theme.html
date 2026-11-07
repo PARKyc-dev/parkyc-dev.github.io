@@ -1,0 +1,27 @@
+<script>
+(() => {
+  const root = document.documentElement;
+  let mode = 'dark';
+  try { if (localStorage.getItem('workspace-theme') === 'light') mode = 'light'; } catch (_) {}
+  function apply(value) {
+    root.setAttribute('data-mode', value);
+    root.setAttribute('data-bs-theme', value);
+    const button = document.querySelector('.theme-toggle');
+    if (button) {
+      const label = value === 'dark' ? '라이트 모드로 전환' : '다크 모드로 전환';
+      button.setAttribute('aria-checked', String(value === 'dark'));
+      button.title = '현재 ' + (value === 'dark' ? '다크' : '라이트') + ' 모드 · 클릭하여 ' + label;
+    }
+  }
+  apply(mode);
+  document.addEventListener('DOMContentLoaded', () => {
+    apply(mode);
+    document.querySelector('.theme-toggle').addEventListener('click', () => {
+      mode = root.getAttribute('data-mode') === 'dark' ? 'light' : 'dark';
+      apply(mode);
+      try { localStorage.setItem('workspace-theme', mode); } catch (_) {}
+    });
+  });
+})();
+</script>
+<link rel="stylesheet" href="{{ '/assets/css/workspace-theme.css' | relative_url }}">

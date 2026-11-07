@@ -1,0 +1,6 @@
+---
+layout: workspace
+---
+<p class="category-back"><a href="{{ '/tags/' | relative_url }}">← Tags</a></p>
+{% assign tag_posts = page.posts | sort: 'date' | reverse %}
+{% include post-log-list.html posts=tag_posts command="ls -al" name=page.title %}

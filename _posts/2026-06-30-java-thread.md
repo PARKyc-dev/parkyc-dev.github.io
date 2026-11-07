@@ -1,5 +1,6 @@
 ---
 title: "Java 동시성 테스트 방법 - Thread"
+log_type: LEARN
 date: 2026-06-30 23:00:00 +0900
 categories: [Backend, Java]
 tags: [java, concurrency, thread, test]

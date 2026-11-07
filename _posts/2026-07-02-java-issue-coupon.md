@@ -1,5 +1,6 @@
 ---
 title: "동시성 문제 해결 - 쿠폰"
+log_type: BUILD
 date: 2026-07-02 23:00:00 +0900
 categories: [Backend, Concurrency]
 tags: [java, concurrency, coupon, 작성중]

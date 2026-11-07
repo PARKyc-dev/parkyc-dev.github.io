@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  {% if page.url == '/' %}
+  {% seo title=false %}
+  <title>{{ site.title | escape }}</title>
+  {% else %}
+  {% seo %}
+  {% endif %}
+  {% include favicons.html %}
+  <link rel="stylesheet" href="{{ '/assets/css/workspace.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/workspace-header.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/workspace-profile.css' | relative_url }}">
+{% include workspace-theme.html %}
+</head>
+<body>
+<div class="window">
+  {% include workspace-header.html %}
+  <div class="workspace-content">
+    {% include workspace-profile.html %}
+    <main>{{ content }}</main>
+  </div>
+  {% include workspace-footer.html %}
+</div>
+{% include workspace-search-script.html %}</body></html>

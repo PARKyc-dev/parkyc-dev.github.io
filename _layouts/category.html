@@ -1,0 +1,6 @@
+---
+layout: workspace
+---
+<p class="category-back"><a href="{{ '/categories/' | relative_url }}">← Categories</a></p>
+{% assign category_posts = page.posts | sort: 'date' | reverse %}
+{% include post-log-list.html posts=category_posts command="ls -al" name=page.title %}

@@ -1,0 +1,10 @@
+  {% unless page.layout == "post" %}
+  <div class="workspace-titlebar"><span aria-hidden="true" class="workspace-dots"><i></i><i></i><i></i></span></div>
+  {% endunless %}
+  <header class="workspace-nav"><a class="workspace-brand" href="{{ '/' | relative_url }}"><span aria-hidden="true">&gt;<span class="brand-cursor">_</span></span> PARKyc.dev</a>
+    <nav aria-label="주 메뉴"><a href="{{ '/archives/' | relative_url }}">Posts</a><a href="{{ '/tags/' | relative_url }}">Tags</a><a href="{{ '/series/' | relative_url }}">Series</a><a href="{{ '/categories/' | relative_url }}">Categories</a><button type="button" class="search-open" aria-controls="workspace-search" aria-expanded="false">⌕ Search</button><button type="button" class="theme-toggle" role="switch" aria-checked="true" aria-label="다크 모드" title="현재 다크 모드 · 클릭하여 라이트 모드로 전환"><span class="theme-option theme-light"><span aria-hidden="true">☀</span> 라이트</span><span class="theme-option theme-dark"><span aria-hidden="true">☾</span> 다크</span></button></nav>
+  </header>
+  <dialog id="workspace-search" class="search-dialog" aria-label="게시글 검색">
+    <div class="search-dialog-input"><label for="workspace-query" aria-label="검색어"><span aria-hidden="true">&gt;</span></label><input id="workspace-query" type="search" placeholder="검색어를 입력하세요..." autocomplete="off" autofocus><button type="button" class="search-close" aria-label="검색 닫기">ESC</button></div>
+    <div class="search-dialog-body"><ul id="workspace-results" aria-label="검색 결과"></ul><p id="workspace-search-status" class="search-status" role="status" aria-live="polite"></p></div>
+  </dialog>
