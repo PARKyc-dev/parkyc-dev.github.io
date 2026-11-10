@@ -5,7 +5,7 @@ date: 2026-08-26 23:00:00 +0900
 categories: [Project, JYP-Word]
 tags: [project, jyp-word, indexeddb, cursor, data-design]
 toc: true
-comments: true
+comments: false
 ---
 
 JYP-Word는 사용자가 하루에 영어 단어 20개씩 학습하는 서비스다. 처음에는 "사용자가 학습한 단어를 전부 저장하면 되지 않을까?"라고 생각했다. 하지만 학습 기록이 쌓이는 상황을 따라가 보니, **무엇을 저장할지보다 얼마나 적은 정보로 학습 상태를 표현할 수 있는지가 더 중요한 문제**였다.

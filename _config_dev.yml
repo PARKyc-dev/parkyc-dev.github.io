@@ -1,0 +1,4 @@
+# Local previews should fetch the latest generated files.
+pwa:
+  cache:
+    enabled: false
