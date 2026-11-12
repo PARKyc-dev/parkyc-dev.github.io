@@ -1,0 +1,11 @@
+---
+---
+
+// Both palettes are required by the workspace theme switch.
+@use 'abstracts/variables' with ($theme: '');
+
+@use 'main
+{%- if jekyll.environment == 'production' -%}
+  .bundle
+{%- endif -%}
+';

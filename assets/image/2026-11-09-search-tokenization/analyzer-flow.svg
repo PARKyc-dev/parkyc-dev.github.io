@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="820" viewBox="0 0 1400 820" role="img" aria-labelledby="title desc">
+<title id="title">리센느 PULSE 초동 60만장으로 보는 검색 분석</title>
+<desc id="desc">HTML 태그를 제거하고 공백으로 토큰을 나눈 다음 영문을 소문자로 변환한다. 검색어 리센느 pulse의 토큰이 문서 토큰과 일치한다.</desc>
+<rect width="1400" height="820" rx="24" fill="#f4f7fb"/>
+<g font-family="sans-serif" fill="#172b4d">
+<text x="55" y="65" font-size="30" font-weight="700">하나의 문장으로 보는 검색 분석</text>
+<text x="55" y="102" font-size="20" fill="#526984">예시 문서: 리센느 &lt;b&gt;PULSE&lt;/b&gt; 초동 60만장</text>
+<rect x="45" y="145" width="410" height="270" rx="18" fill="#fff" stroke="#c7d6e8"/>
+<text x="68" y="188" font-size="23" font-weight="700">① 문자 필터</text><text x="68" y="222" font-size="18" fill="#526984">HTML 태그 제거</text>
+<text x="68" y="266" font-size="17" fill="#526984">입력</text><text x="68" y="297" font-size="21">리센느 &lt;b&gt;PULSE&lt;/b&gt;</text><text x="68" y="325" font-size="21">초동 60만장</text>
+<text x="68" y="361" font-size="17" fill="#526984">출력</text><text x="68" y="390" font-size="21" font-weight="700">리센느 PULSE 초동 60만장</text>
+<rect x="495" y="145" width="410" height="270" rx="18" fill="#fff" stroke="#c7d6e8"/>
+<text x="518" y="188" font-size="23" font-weight="700">② 토크나이저</text><text x="518" y="222" font-size="18" fill="#526984">공백을 기준으로 분리</text>
+<text x="518" y="267" font-size="17" fill="#526984">입력</text><text x="518" y="298" font-size="21">리센느 PULSE 초동 60만장</text>
+<text x="518" y="350" font-size="17" fill="#526984">출력</text><text x="518" y="380" font-size="21" font-weight="700">[리센느, PULSE, 초동, 60만장]</text>
+<rect x="945" y="145" width="410" height="270" rx="18" fill="#fff" stroke="#c7d6e8"/>
+<text x="968" y="188" font-size="23" font-weight="700">③ 토큰 필터</text><text x="968" y="222" font-size="18" fill="#526984">영문을 소문자로 변환</text>
+<text x="968" y="267" font-size="17" fill="#526984">입력</text><text x="968" y="298" font-size="21">[리센느, PULSE, 초동, 60만장]</text>
+<text x="968" y="350" font-size="17" fill="#526984">색인할 토큰</text><text x="968" y="380" font-size="21" font-weight="700">[리센느, pulse, 초동, 60만장]</text>
+<rect x="45" y="470" width="1310" height="235" rx="18" fill="#eaf1fc"/>
+<text x="75" y="515" font-size="23" font-weight="700">검색어도 같은 방식으로 분석하면</text>
+<text x="75" y="565" font-size="18" fill="#526984">검색어</text><text x="75" y="602" font-size="23" font-weight="700">리센느 pulse</text>
+<text x="405" y="565" font-size="18" fill="#526984">검색어 토큰</text><text x="405" y="602" font-size="23" font-weight="700">[리센느, pulse]</text>
+<text x="755" y="565" font-size="18" fill="#526984">문서에 색인된 토큰</text><text x="755" y="602" font-size="23" font-weight="700">[리센느, pulse, 초동, 60만장]</text>
+<text x="75" y="662" font-size="19" fill="#16724c" font-weight="700">두 검색어 토큰이 문서의 토큰과 일치</text>
+<text x="55" y="765" font-size="17" fill="#526984">설명용 설정이다. 실제 결과는 분석기와 검색 쿼리 설정에 따라 달라진다.</text>
+</g><g stroke="#7189aa" stroke-width="3" fill="none"><path d="M460 280h25m-9-9 9 9-9 9"/><path d="M910 280h25m-9-9 9 9-9 9"/><path d="M305 595h55m-9-9 9 9-9 9"/><path d="M655 595h55m-9-9 9 9-9 9"/></g></svg>

@@ -1,5 +1,5 @@
 <section class="logs" aria-labelledby="logs-title">
-  <div class="section-heading"><h2 id="logs-title" class="command"><span>➜</span> {{ include.command | default: 'tail -f' }} ~/logs/<b>{{ include.name | default: 'dev.log' | escape }}</b></h2><span class="online">● WORKSPACE</span></div>
+  <div class="section-heading"><h2 id="logs-title" class="command"><span>➜</span> {{ include.command | default: 'tail -f' }} ~/{{ include.directory | default: 'logs' | escape }}/<b>{{ include.name | default: 'dev.log' | escape }}</b></h2><span class="online">● WORKSPACE</span></div>
   <div class="log-list">
   {% assign log_posts = include.posts | default: site.posts %}
   {% assign log_limit = include.limit | default: log_posts.size %}

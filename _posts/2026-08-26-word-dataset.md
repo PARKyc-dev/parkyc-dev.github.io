@@ -5,7 +5,7 @@ date: 2026-08-26 22:00:00 +0900
 categories: [Project, JYP-Word]
 tags: [project, jyp-word, dataset]
 toc: true
-comments: true
+comments: false
 ---
 
 # JYP-Word : 하루 20단어 학습 사이트

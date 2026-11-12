@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="600" viewBox="0 0 1500 600" role="img" aria-labelledby="title desc">
+<title id="title">문서에서 청크로, 청크에서 토큰으로</title>
+<desc id="desc">왼쪽의 문서를 가운데의 세 문장 청크로 나누고 가운데 청크를 오른쪽의 네 검색 토큰으로 나눈다.</desc>
+<rect width="1500" height="600" rx="24" fill="#f6f8fc"/>
+<g font-family="sans-serif" fill="#172b4d">
+<text x="50" y="60" font-size="30" font-weight="700">문서 → 청크 → 토큰</text>
+<text x="50" y="96" font-size="19" fill="#526984">같은 텍스트를 서로 다른 크기로 나누는 예시</text>
+<text x="55" y="155" font-size="22" font-weight="700">하나의 문서</text>
+<rect x="50" y="175" width="360" height="270" rx="17" fill="#fff" stroke="#cbd8eb" stroke-width="2"/>
+<text x="75" y="230" font-size="20">계정을 만듭니다.</text><text x="75" y="290" font-size="20">비밀번호 재설정 방법을</text><text x="75" y="323" font-size="20">확인합니다.</text><text x="75" y="385" font-size="20">알림을 설정합니다.</text>
+<text x="515" y="155" font-size="22" font-weight="700" fill="#476b9c">① 청킹</text>
+<rect x="510" y="175" width="390" height="70" rx="14" fill="#eaf1fc" stroke="#b7cdef" stroke-width="2"/><text x="530" y="203" font-size="15" fill="#526984">청크 1</text><text x="530" y="230" font-size="19" font-weight="700">계정을 만듭니다.</text>
+<rect x="510" y="260" width="390" height="100" rx="14" fill="#e6f4ef" stroke="#49a481" stroke-width="3"/><text x="530" y="289" font-size="15" fill="#356354">청크 2</text><text x="530" y="325" font-size="19" font-weight="700">비밀번호 재설정 방법을 확인합니다.</text>
+<rect x="510" y="375" width="390" height="70" rx="14" fill="#eaf1fc" stroke="#b7cdef" stroke-width="2"/><text x="530" y="403" font-size="15" fill="#526984">청크 3</text><text x="530" y="430" font-size="19" font-weight="700">알림을 설정합니다.</text>
+<text x="1010" y="155" font-size="22" font-weight="700" fill="#16724c">② 토크나이징</text>
+<rect x="1005" y="175" width="445" height="270" rx="17" fill="#fff" stroke="#9bcdbb" stroke-width="2"/><text x="1030" y="215" font-size="17" fill="#356354">청크 2를 검색용 토큰으로 나누기</text>
+<rect x="1030" y="250" width="155" height="54" rx="27" fill="#c5eadb"/><text x="1107" y="284" text-anchor="middle" font-size="20" font-weight="700">비밀번호</text>
+<rect x="1200" y="250" width="125" height="54" rx="27" fill="#c5eadb"/><text x="1262" y="284" text-anchor="middle" font-size="20" font-weight="700">재설정</text>
+<rect x="1030" y="324" width="115" height="54" rx="27" fill="#c5eadb"/><text x="1087" y="358" text-anchor="middle" font-size="20" font-weight="700">방법</text>
+<rect x="1160" y="324" width="115" height="54" rx="27" fill="#c5eadb"/><text x="1217" y="358" text-anchor="middle" font-size="20" font-weight="700">확인</text>
+<text x="50" y="510" font-size="20" fill="#526984">청킹: 문서를 문장 크기의 조각으로 나눈다.</text><text x="50" y="548" font-size="20" fill="#526984">토크나이징: 청크를 검색에 사용할 더 작은 단위로 나눈다.</text>
+<text x="50" y="582" font-size="15" fill="#526984">설명을 위한 문장 단위 청킹 예시이며, 실제 청크 크기와 토큰은 설정에 따라 달라진다.</text></g>
+<g stroke="#7189aa" stroke-width="3" fill="none"><path d="M425 310h65m-11-10 11 10-11 10"/><path d="M915 310h70m-11-10 11 10-11 10"/></g></svg>

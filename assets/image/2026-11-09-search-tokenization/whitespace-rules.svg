@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="780" viewBox="0 0 900 780" role="img" aria-labelledby="title desc">
+<title id="title">공백 분리와 조사 제거의 한계</title>
+<desc id="desc">제거할 조사가 이, 가, 을, 를일 때 엔진이는 엔진이 되지만 평가는 평으로 잘못 잘린다. 띄어쓰기와 활용형에 따라 서로 다른 토큰이 만들어지는 예시도 보여 준다.</desc>
+<rect width="900" height="780" rx="24" fill="#f6f8fc"/>
+<g font-family="sans-serif" fill="#172b4d">
+<text x="48" y="62" font-size="30" font-weight="700">공백 분리와 조사 제거의 한계</text>
+<rect x="36" y="90" width="828" height="230" rx="18" fill="#fff" stroke="#cbd8eb" stroke-width="2"/>
+<text x="64" y="132" font-size="24" font-weight="700">조사 제거</text>
+<text x="64" y="170" font-size="20" fill="#526984">제거할 조사: 이, 가, 을, 를</text>
+<text x="64" y="218" font-size="25">엔진이 → [엔진]</text>
+<text x="400" y="218" font-size="20" fill="#16724c">의도한 결과</text>
+<text x="64" y="270" font-size="25">평가 → [평]</text>
+<text x="400" y="270" font-size="20" fill="#b33c36">단어의 일부를 잘못 제거</text>
+<rect x="36" y="340" width="828" height="185" rx="18" fill="#fff" stroke="#cbd8eb" stroke-width="2"/>
+<text x="64" y="382" font-size="24" font-weight="700">띄어쓰기</text>
+<text x="64" y="435" font-size="25">검색 엔진 → [검색, 엔진]</text>
+<text x="64" y="485" font-size="25">검색엔진 → [검색엔진]</text>
+<rect x="36" y="545" width="828" height="185" rx="18" fill="#fff" stroke="#cbd8eb" stroke-width="2"/>
+<text x="64" y="587" font-size="24" font-weight="700">활용형</text>
+<text x="64" y="640" font-size="25">달리다 → [달리다]</text>
+<text x="64" y="690" font-size="25">달린다 → [달린다]</text>
+</g></svg>

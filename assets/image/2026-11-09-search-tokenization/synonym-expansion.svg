@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="295" viewBox="0 0 960 295" role="img" aria-labelledby="title desc">
+  <title id="title">동의어를 적용한 검색어 확장</title>
+  <desc id="desc">차량 보험을 검색하면 자동차와 차량을 동의어로 묶은 규칙에 따라 (차량 또는 자동차)와 보험으로 확장한다. 자동차와 보험 토큰이 있는 문서도 검색 후보가 된다.</desc>
+  <rect width="960" height="295" rx="24" fill="#f6f8fc"/>
+  <g font-family="sans-serif" fill="#172b4d">
+    <text x="30" y="47" font-size="27" font-weight="700">동의어를 적용한 검색어 확장</text>
+    <rect x="30" y="68" width="292" height="37" rx="9" fill="#eaf1fc"/>
+    <text x="45" y="93" font-size="18">동의어 규칙 · 자동차, 차량</text>
+    <rect x="30" y="126" width="213" height="137" rx="15" fill="#fff" stroke="#cbd8eb"/>
+    <rect x="288" y="126" width="315" height="137" rx="15" fill="#fff" stroke="#cbd8eb"/>
+    <rect x="648" y="126" width="282" height="137" rx="15" fill="#e6f4ef" stroke="#9bcdbb"/>
+    <g font-size="19" font-weight="700">
+      <text x="48" y="159">검색어</text>
+      <text x="306" y="159">검색어 확장</text>
+      <text x="666" y="159" fill="#16724c">일치하는 문서 토큰</text>
+    </g>
+    <g font-size="23" font-weight="700">
+      <text x="48" y="206">차량 보험</text>
+      <text x="306" y="206">(차량 또는 자동차) + 보험</text>
+      <text x="666" y="206">[자동차, 보험]</text>
+    </g>
+    <text x="666" y="238" font-size="17" fill="#356354">이 문서도 검색 후보가 됨</text>
+  </g>
+  <g stroke="#476b9c" stroke-width="2.5" fill="none">
+    <path d="M251 195h28m-7-7 7 7-7 7"/>
+    <path d="M611 195h28m-7-7 7 7-7 7"/>
+  </g>
+</svg>

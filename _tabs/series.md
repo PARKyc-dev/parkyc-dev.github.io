@@ -14,12 +14,9 @@ order: 6
   {% else %}
   <div class="category-grid series-index">
     {% for group in series_groups %}
-    <details class="series-card-group">
-      <summary class="category-card">{% include taxonomy-card-content.html name=group.name count=group.items.size description="시리즈 글 목록 펼치기" %}</summary>
-      <ol class="series-list series-card-posts">
-        {% for post in group.items %}<li><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></li>{% endfor %}
-      </ol>
-    </details>
+    {% assign series_slug = group.name | slugify | url_encode %}
+    {% assign series_url = '/series/' | append: series_slug | append: '/' %}
+    <a class="category-card" href="{{ series_url | relative_url }}">{% include taxonomy-card-content.html name=group.name count=group.items.size description="시리즈 글 목록 보기" %}</a>
     {% endfor %}
   </div>
   {% endif %}

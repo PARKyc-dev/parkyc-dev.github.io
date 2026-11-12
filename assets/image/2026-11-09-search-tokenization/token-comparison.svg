@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="271" viewBox="0 0 960 271" role="img" aria-labelledby="title desc">
+  <title id="title">문서와 검색어의 토큰 비교</title>
+  <desc id="desc">문서 자동차 보험은 자동차와 보험으로, 검색어 차량 보험은 차량과 보험으로 나뉜다. 자동차와 차량은 일치하지 않고 보험만 일치한다.</desc>
+  <rect width="960" height="271" rx="24" fill="#f6f8fc"/>
+  <g font-family="sans-serif" fill="#172b4d">
+    <text x="32" y="49" font-size="27" font-weight="700">문서와 검색어의 토큰 비교</text>
+    <rect x="32" y="76" width="896" height="75" rx="14" fill="#fff" stroke="#cbd8eb"/>
+    <rect x="32" y="168" width="896" height="75" rx="14" fill="#fff" stroke="#cbd8eb"/>
+    <g font-size="18" fill="#526984">
+      <text x="54" y="120">문서</text>
+      <text x="54" y="212">검색어</text>
+    </g>
+    <g font-size="24" font-weight="700">
+      <text x="177" y="122">자동차 보험</text>
+      <text x="177" y="214">차량 보험</text>
+    </g>
+    <g fill="#fee2e2">
+      <rect x="483" y="92" width="178" height="43" rx="9"/>
+      <rect x="483" y="184" width="178" height="43" rx="9"/>
+    </g>
+    <g fill="#c5eadb">
+      <rect x="711" y="92" width="178" height="43" rx="9"/>
+      <rect x="711" y="184" width="178" height="43" rx="9"/>
+    </g>
+    <g font-size="22" text-anchor="middle">
+      <text x="572" y="121">자동차</text>
+      <text x="572" y="213">차량</text>
+      <text x="800" y="121">보험</text>
+      <text x="800" y="213">보험</text>
+      <text x="572" y="168" fill="#b33c36">≠</text>
+      <text x="800" y="168" fill="#16724c">=</text>
+    </g>
+  </g>
+  <g stroke="#476b9c" stroke-width="2.5" fill="none">
+    <path d="M401 113h52m-7-7 7 7-7 7"/>
+    <path d="M401 205h52m-7-7 7 7-7 7"/>
+  </g>
+</svg>

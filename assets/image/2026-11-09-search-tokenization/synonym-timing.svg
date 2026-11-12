@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="340" viewBox="0 0 960 340" role="img" aria-labelledby="title desc">
+  <title id="title">동의어를 적용하는 두 시점</title>
+  <desc id="desc">색인 시점에는 문서에 동의어 규칙을 적용하며 기존 문서에 규칙 변경을 반영하려면 재색인이 필요하다. 검색 시점에는 검색어에 규칙을 적용하며 검색 분석기와 규칙 갱신 방식을 설정하면 기존 문서의 재색인 없이 규칙을 바꿀 수 있다.</desc>
+  <rect width="960" height="340" rx="24" fill="#f6f8fc"/>
+  <g font-family="sans-serif" fill="#172b4d">
+    <text x="32" y="47" font-size="27" font-weight="700">동의어를 적용하는 두 시점</text>
+    <rect x="32" y="70" width="896" height="108" rx="15" fill="#fff" stroke="#cbd8eb"/>
+    <rect x="32" y="195" width="896" height="108" rx="15" fill="#fff" stroke="#cbd8eb"/>
+    <rect x="52" y="103" width="128" height="42" rx="9" fill="#eaf1fc"/>
+    <rect x="52" y="228" width="128" height="42" rx="9" fill="#e6f4ef"/>
+    <g font-size="20" font-weight="700" text-anchor="middle">
+      <text x="116" y="131">색인 시점</text>
+      <text x="116" y="256">검색 시점</text>
+    </g>
+    <g font-size="21" font-weight="700">
+      <text x="222" y="110">문서 → 동의어 규칙 적용 → 색인</text>
+      <text x="222" y="235">검색어 → 동의어 규칙 적용 → 검색</text>
+    </g>
+    <g font-size="18" fill="#526984">
+      <text x="222" y="143">바뀐 규칙을 기존 문서에도 반영하려면 재색인이 필요하다.</text>
+      <text x="222" y="263">재색인 없이 규칙을 바꿀 수 있다.</text>
+      <text x="222" y="287">검색 분석기와 규칙 갱신 방식을 설정해야 한다.</text>
+    </g>
+  </g>
+</svg>

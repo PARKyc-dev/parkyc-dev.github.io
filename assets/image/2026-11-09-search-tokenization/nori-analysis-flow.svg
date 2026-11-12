@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1160" height="570" viewBox="0 0 1160 570" role="img" aria-labelledby="title desc">
+<title id="title">Nori 분석 단계별 토큰 변화 예시</title>
+<desc id="desc">리센느(RESCENE)의 멤버 원이, 미나미, 리브, 메이 그리고 제나를 분석하는 예시. 토큰 분리를 가정하고 품사 필터에서 의와 그리고를 제거한 뒤 RESCENE을 rescene으로 바꾼다.</desc>
+<rect width="1160" height="570" rx="24" fill="#f6f8fc"/>
+<g font-family="sans-serif" fill="#172b4d">
+<text x="28" y="46" font-size="28" font-weight="700">Nori 분석 단계별 토큰 변화</text>
+<text x="28" y="76" font-size="18" fill="#526984">토큰 분리를 가정한 예시 · 품사 필터의 제거 목록에 JKG와 MAJ를 포함</text>
+<rect x="28" y="103" width="208" height="439" rx="14" fill="#fff" stroke="#cbd8eb"/>
+<text x="44" y="139" font-size="23" font-weight="700">입력</text>
+<text x="44" y="169" font-size="14" fill="#526984">원문</text>
+<rect x="44" y="186" width="176" height="28" rx="7" fill="#eaf1fc"/>
+<text x="54" y="206" font-size="16">리센느(RESCENE)의</text>
+<rect x="44" y="220" width="176" height="28" rx="7" fill="#eaf1fc"/>
+<text x="54" y="240" font-size="16">멤버 원이, 미나미,</text>
+<rect x="44" y="254" width="176" height="28" rx="7" fill="#eaf1fc"/>
+<text x="54" y="274" font-size="16">리브, 메이 그리고 제나</text>
+<path d="M235 318h17m-6-6 6 6-6 6" fill="none" stroke="#476b9c" stroke-width="2.5"/>
+<rect x="252" y="103" width="208" height="439" rx="14" fill="#fff" stroke="#cbd8eb"/>
+<text x="268" y="139" font-size="23" font-weight="700">토큰화</text>
+<text x="268" y="169" font-size="14" fill="#526984">괄호·쉼표 제외, 형태소 분리</text>
+<rect x="268" y="186" width="176" height="28" rx="7" fill="#eaf1fc"/>
+<text x="278" y="206" font-size="19">리센느</text>
+<rect x="268" y="220" width="176" height="28" rx="7" fill="#eaf1fc"/>
+<text x="278" y="240" font-size="19">RESCENE</text>
+<rect x="268" y="254" width="176" height="28" rx="7" fill="#fee2e2"/>
+<text x="278" y="274" font-size="19">의</text>
+<rect x="268" y="288" width="176" height="28" rx="7" fill="#eaf1fc"/>
+<text x="278" y="308" font-size="19">멤버</text>
+<rect x="268" y="322" width="176" height="28" rx="7" fill="#eaf1fc"/>
+<text x="278" y="342" font-size="19">원이</text>
+<rect x="268" y="356" width="176" height="28" rx="7" fill="#eaf1fc"/>
+<text x="278" y="376" font-size="19">미나미</text>
+<rect x="268" y="390" width="176" height="28" rx="7" fill="#eaf1fc"/>
+<text x="278" y="410" font-size="19">리브</text>
+<rect x="268" y="424" width="176" height="28" rx="7" fill="#eaf1fc"/>
+<text x="278" y="444" font-size="19">메이</text>
+<rect x="268" y="458" width="176" height="28" rx="7" fill="#fee2e2"/>
+<text x="278" y="478" font-size="19">그리고</text>
+<rect x="268" y="492" width="176" height="28" rx="7" fill="#eaf1fc"/>
+<text x="278" y="512" font-size="19">제나</text>
+<path d="M459 318h17m-6-6 6 6-6 6" fill="none" stroke="#476b9c" stroke-width="2.5"/>
+<rect x="476" y="103" width="208" height="439" rx="14" fill="#fff" stroke="#cbd8eb"/>
+<text x="492" y="139" font-size="23" font-weight="700">품사 필터</text>
+<text x="492" y="169" font-size="14" fill="#526984">의(JKG), 그리고(MAJ) 제거</text>
+<rect x="492" y="186" width="176" height="28" rx="7" fill="#eaf1fc"/>
+<text x="502" y="206" font-size="19">리센느</text>
+<rect x="492" y="220" width="176" height="28" rx="7" fill="#eaf1fc"/>
+<text x="502" y="240" font-size="19">RESCENE</text>
+<rect x="492" y="254" width="176" height="28" rx="7" fill="#eaf1fc"/>
+<text x="502" y="274" font-size="19">멤버</text>
+<rect x="492" y="288" width="176" height="28" rx="7" fill="#eaf1fc"/>
+<text x="502" y="308" font-size="19">원이</text>
+<rect x="492" y="322" width="176" height="28" rx="7" fill="#eaf1fc"/>
+<text x="502" y="342" font-size="19">미나미</text>
+<rect x="492" y="356" width="176" height="28" rx="7" fill="#eaf1fc"/>
+<text x="502" y="376" font-size="19">리브</text>
+<rect x="492" y="390" width="176" height="28" rx="7" fill="#eaf1fc"/>
+<text x="502" y="410" font-size="19">메이</text>
+<rect x="492" y="424" width="176" height="28" rx="7" fill="#eaf1fc"/>
+<text x="502" y="444" font-size="19">제나</text>
+<path d="M683 318h17m-6-6 6 6-6 6" fill="none" stroke="#476b9c" stroke-width="2.5"/>
+<rect x="700" y="103" width="208" height="439" rx="14" fill="#fff" stroke="#cbd8eb"/>
+<text x="716" y="139" font-size="23" font-weight="700">독음 변환</text>
+<text x="716" y="169" font-size="14" fill="#526984">한자가 없어 그대로 유지</text>
+<rect x="716" y="186" width="176" height="28" rx="7" fill="#eaf1fc"/>
+<text x="726" y="206" font-size="19">리센느</text>
+<rect x="716" y="220" width="176" height="28" rx="7" fill="#eaf1fc"/>
+<text x="726" y="240" font-size="19">RESCENE</text>
+<rect x="716" y="254" width="176" height="28" rx="7" fill="#eaf1fc"/>
+<text x="726" y="274" font-size="19">멤버</text>
+<rect x="716" y="288" width="176" height="28" rx="7" fill="#eaf1fc"/>
+<text x="726" y="308" font-size="19">원이</text>
+<rect x="716" y="322" width="176" height="28" rx="7" fill="#eaf1fc"/>
+<text x="726" y="342" font-size="19">미나미</text>
+<rect x="716" y="356" width="176" height="28" rx="7" fill="#eaf1fc"/>
+<text x="726" y="376" font-size="19">리브</text>
+<rect x="716" y="390" width="176" height="28" rx="7" fill="#eaf1fc"/>
+<text x="726" y="410" font-size="19">메이</text>
+<rect x="716" y="424" width="176" height="28" rx="7" fill="#eaf1fc"/>
+<text x="726" y="444" font-size="19">제나</text>
+<path d="M907 318h17m-6-6 6 6-6 6" fill="none" stroke="#476b9c" stroke-width="2.5"/>
+<rect x="924" y="103" width="208" height="439" rx="14" fill="#fff" stroke="#cbd8eb"/>
+<text x="940" y="139" font-size="23" font-weight="700">소문자 변환</text>
+<text x="940" y="169" font-size="14" fill="#526984">RESCENE → rescene</text>
+<rect x="940" y="186" width="176" height="28" rx="7" fill="#eaf1fc"/>
+<text x="950" y="206" font-size="19">리센느</text>
+<rect x="940" y="220" width="176" height="28" rx="7" fill="#c5eadb"/>
+<text x="950" y="240" font-size="19">rescene</text>
+<rect x="940" y="254" width="176" height="28" rx="7" fill="#eaf1fc"/>
+<text x="950" y="274" font-size="19">멤버</text>
+<rect x="940" y="288" width="176" height="28" rx="7" fill="#eaf1fc"/>
+<text x="950" y="308" font-size="19">원이</text>
+<rect x="940" y="322" width="176" height="28" rx="7" fill="#eaf1fc"/>
+<text x="950" y="342" font-size="19">미나미</text>
+<rect x="940" y="356" width="176" height="28" rx="7" fill="#eaf1fc"/>
+<text x="950" y="376" font-size="19">리브</text>
+<rect x="940" y="390" width="176" height="28" rx="7" fill="#eaf1fc"/>
+<text x="950" y="410" font-size="19">메이</text>
+<rect x="940" y="424" width="176" height="28" rx="7" fill="#eaf1fc"/>
+<text x="950" y="444" font-size="19">제나</text>
+</g></svg>

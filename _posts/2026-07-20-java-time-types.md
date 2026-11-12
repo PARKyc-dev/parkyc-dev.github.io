@@ -5,7 +5,7 @@ date: 2026-07-20 22:00:00 +0900
 categories: [Backend, Java]
 tags: [java, time-api]
 toc: true
-comments: true
+comments: false
 ---
 
 # Java 시간타입형
