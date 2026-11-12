@@ -29,3 +29,22 @@ body{background:var(--ws-090e15, #090e15)!important;color:var(--ws-f0f2f5, #f0f2
 #toc-wrapper::before,#toc-wrapper::after{display:none}
 
 .post-meta-row{display:flex;justify-content:space-between;align-items:baseline;gap:1rem}.post-meta-dates{display:flex;flex-wrap:wrap;gap:.5rem 1rem}.post-meta-reading{flex-shrink:0;text-align:right}
+
+/* Distinguish article table headings from the page and table body. */
+#main-wrapper article .content .table-wrapper > table > thead th{background-color:var(--post-table-header-bg);color:var(--post-table-header-text)}
+
+/* Wrap article table content within the available width. */
+#main-wrapper article .content .table-wrapper > table{width:100%;table-layout:auto}
+#main-wrapper article .content .table-wrapper > table :is(th,td){min-width:clamp(3rem,8vw,7rem);max-width:32rem;white-space:normal;overflow-wrap:anywhere}
+
+/* Give third-level article headings a smaller marker than section headings. */
+#main-wrapper article .content h3{position:relative;padding-inline-start:.85rem}
+#main-wrapper article .content h3::before{content:"";position:absolute;inset-inline-start:0;inset-block-start:.55em;width:.5rem;height:4px;border-radius:2px;background-color:var(--link-color)}
+
+#main-wrapper article .content h2 {
+  font-weight: 700;
+}
+
+#main-wrapper article .content h3 {
+  font-weight: 600;
+}

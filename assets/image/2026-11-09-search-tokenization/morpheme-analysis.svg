@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="268" viewBox="0 0 960 268" role="img" aria-labelledby="title desc">
+  <title id="title">형태소 분석과 조사·어미 제거</title>
+  <desc id="desc">검색 엔진이 문서를 찾는다를 검색과 엔진과 문서(명사), 이와 를(조사), 찾(동사 어간), 는다(어미)로 나눈다. 조사와 어미를 제거하면 검색, 엔진, 문서, 찾이 남는다.</desc>
+  <rect width="960" height="268" rx="24" fill="#f6f8fc"/>
+  <g font-family="sans-serif" fill="#172b4d">
+    <text x="28" y="48" font-size="27" font-weight="700">형태소 분석과 조사·어미 제거</text>
+    <rect x="28" y="73" width="214" height="167" rx="15" fill="#fff" stroke="#cbd8eb"/>
+    <rect x="282" y="73" width="380" height="167" rx="15" fill="#fff" stroke="#cbd8eb"/>
+    <rect x="702" y="73" width="230" height="167" rx="15" fill="#e6f4ef" stroke="#9bcdbb"/>
+    <g font-size="21" font-weight="700">
+      <text x="47" y="111">입력</text>
+      <text x="301" y="111">형태소 분석</text>
+      <text x="721" y="111" fill="#16724c">조사·어미 제거</text>
+    </g>
+    <g font-size="20">
+      <text x="47" y="155">검색 엔진이</text>
+      <text x="47" y="185">문서를 찾는다</text>
+      <text x="301" y="152">검색(명사) + 엔진(명사) + <tspan fill="#a03832">이(조사)</tspan></text>
+      <text x="301" y="182">문서(명사) + <tspan fill="#a03832">를(조사)</tspan></text>
+      <text x="301" y="212">찾(동사 어간) + <tspan fill="#a03832">는다(어미)</tspan></text>
+      <text x="721" y="170">[검색, 엔진, 문서, 찾]</text>
+    </g>
+  </g>
+  <g stroke="#476b9c" stroke-width="2.5" fill="none">
+    <path d="M249 159h26m-7-7 7 7-7 7"/>
+    <path d="M669 159h26m-7-7 7 7-7 7"/>
+  </g>
+</svg>

@@ -2,3 +2,4 @@
 :root[data-mode="light"]{--main-bg:#fff;--sidebar-bg:#f6f8fa;--topbar-bg:#fff;--main-border-color:#d0d7de;--text-color:#303d4a;--text-muted-color:#667585;--heading-color:#202b36;--link-color:#137348;--card-bg:#f6f8fa;--card-hovor-bg:#e8eef4;--code-bg:#f6f8fa;--code-header-bg:#e9eef3;--toc-highlight:#137348;--btn-border-color:#d0d7de;--search-border-color:#d0d7de;--highlight-bg:#f6f8fa}
 :root[data-mode="light"] .theme-toggle::before{transform:translateX(0);background:#fff}:root[data-mode="light"] .theme-light{color:#137348}:root[data-mode="light"] .theme-dark{color:#667585}:root[data-mode="light"] #workspace-search::backdrop{background:rgba(28,39,50,.45)}
 :root[data-mode="light"]{--tb-border-color:var(--ws-303a46);--language-border-color:var(--ws-303a46)}
+:root[data-mode="light"]{--post-table-header-bg:#e5edf4;--post-table-header-text:#202b36}
